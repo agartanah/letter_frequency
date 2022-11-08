@@ -64,8 +64,10 @@ int main() {
   }
   
   for (int indexOut = 0; indexOut < indexAlphabet; ++indexOut) {
-    cout << fileAlphabet[indexOut] << " — " << letterFrequencyArray[indexOut] 
-         << endl;
+    if (letterFrequencyArray[indexOut] != 1) {
+      cout << fileAlphabet[indexOut] << " — " << letterFrequencyArray[indexOut] - 1
+           << endl;
+    }
   }
   cout << endl;
   
